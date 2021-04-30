@@ -8,6 +8,7 @@ const Home = () => {
     const { state } = useContext(UserContext)
 
     useEffect(() => {
+        if(state){
         fetch('/getsubpost', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('jwt')
@@ -15,7 +16,7 @@ const Home = () => {
         }).then(response => response.json())
           .then(result => {
               setData(result.posts) 
-          })
+          })}
     },[data])
 
     const like = (id) => {
