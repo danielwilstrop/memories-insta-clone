@@ -14,11 +14,12 @@ Live site hosted at Heroku, [Click Here](https://memories-social-media-clone.her
 - Materiallize library for styles 
 
 
-# To-Do at later date #
+# To-Do #
 
 - [ ] Delete account functionality
 - [ ] Forogtten password/username links using NodeMailer 
 - [ ] Live Chat with other Users feature 
+- [ ] Display list of followers/following on click + chat or view profile options
 - [ ] Notifications
 - [ ] Reduce code length per file with new componets and fetch functions in seperate files
 
