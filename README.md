@@ -4,7 +4,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Full stack socila media app made with the MERN stack.
 
-Live site hosted at Heroku, [Click Here](https://memories-social-media-clone.herokuapp.com/login)
  
 # Tech Used #
 - React
