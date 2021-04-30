@@ -61,7 +61,8 @@ router.post('/signup', (req, res) => {
 })
 
 router.post('/signin', (req,res) => {
-    const { email, password, pic } = req.body
+    const { email, password } = req.body
+    res.json({ data: 'connected '})
     if(!email || !password){
         res.status(422).json({ error: "Please enter log-in details"})
     }
