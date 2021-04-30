@@ -22,17 +22,19 @@ mongoose.connect(process.env.MONGO_DB, { useNewUrlParser: true,  useUnifiedTopol
 require('./models/user')
 require('./models/post')
 
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, 'build')))
+
+    app.get('*', (req,res) => {
+        res.sendFile(path.join(__dirname, 'build', 'index.html'))
+    })
+}
+
 app.use(cors())
 app.use(express.json())
 app.use(authRoutes)
 app.use(postRoutes)
 app.use(userRoutes)
-
-app.use(express.static(path.join(__dirname, 'build')))
-
-app.get('*', (req,res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'))
-})
 
 app.listen(PORT, () => {
     console.log(`Server started on port: ${PORT}`)
